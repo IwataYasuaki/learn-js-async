@@ -3,15 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>async</title>
 </head>
 <body>
     <h1>async</h1>
+
     <div id="a">a: </div>
     <div id="b">b: </div>
     <div id="c">c: </div>
-    <button onclick="mainsync()">sync</button>
-    <button onclick="mainasync()">async</button>
+
+    <button onclick="main1()">
+        countup("a");<br>
+        countup("b");<br>
+        countup("c");
+    </button>
+
+    <button onclick="main2()">
+        await countup("a");<br>
+        countup("b");<br>
+        countup("c");
+    </button>
+
+    <button onclick="main3()">
+        countup("a");<br>
+        await countup("b");<br>
+        countup("c");
+    </button>
+
+    <button onclick="main4()">
+        countup("a");<br>
+        countup("b");<br>
+        await countup("c");
+    </button>
+
+    <button onclick="main5()">
+        await countup("a");<br>
+        await countup("b");<br>
+        countup("c");
+    </button>
+
+    <button onclick="main6()">
+        await countup("a");<br>
+        countup("b");<br>
+        await countup("c");
+    </button>
+
+    <button onclick="main7()">
+        countup("a");<br>
+        awiat countup("b");<br>
+        awiat countup("c");
+    </button>
+
+    <button onclick="main8()">
+        await countup("a");<br>
+        await countup("b");<br>
+        await countup("c");
+    </button>
+
     <script src="async.js"></script>
 </body>
 </html>
